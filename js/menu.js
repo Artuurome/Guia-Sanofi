@@ -39,6 +39,7 @@
 
 	function init() {
 		var showMenu = document.getElementById( 'showMenu' ),
+			autoserviciosNacionales = document.getElementById( 'autoserviciosNacionales' ),
 			perspectiveWrapper = document.getElementById( 'perspective' ),
 			container = perspectiveWrapper.querySelector( '.container' ),
 			contentWrapper = container.querySelector( '.wrapper' );
@@ -77,8 +78,17 @@
 				classie.remove( perspectiveWrapper, 'animate' );
 			}
 		});
+		
+		autoserviciosNacionales.addEventListener( clickevent, function( ev ) {
+			
+				classie.remove( perspectiveWrapper, 'animate' );
+			
+		});
 
 		perspectiveWrapper.addEventListener( clickevent, function( ev ) { return false; } );
+		
+		
+
 	}
 
 	init();

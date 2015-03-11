@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+
+<title>Espacio marzo</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<meta name="description" content="Guia Espacio Sanofi" />
+<meta name="author" content="Craft" />
+
+
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+
+<script src="js/jquery-2.1.3.min.js"></script>
+<script src="js/jquery.panzoom.js"></script>
+<script src="js/modernizr.custom.25376.js"></script> 
+<script src="js/global.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#estomacales").click(function(event) {
+			$("#cambio").load('estomacales.html');
+		});
+		
+		$(".showDashboard").click(function(event) {
+			$("#envoltorio").load('walmart-dashboard.html');
+		});
+		
+		$('.pop-up-container').hide();
+	  $('.info').click(function(){
+		$('.pop-up-container').show();
+		$('.pop-up').fadeIn(300);
+	  });
+	  
+	  $('.cerrar').click(function() {
+	  $('.pop-up-container').hide();
+	  });
+	  
+	});
+</script>
+
+</head>
+<body>
+                  <div class="submenu">
+                      <div class="submenu-wraperAuxiliar">
+                          <div class="submenu-wraper">
+                              <div class="boton-submenu" style="background-color:#324392"><a href="walmartHigiene.html"><p style="color:#ffffff">Higiene Femenina</p></a></div>
+                              <div id="estomacales" class="boton-submenu"><a><p>Estomacales</p></a></div>
+                              <div class="boton-submenu"><a href="walmartMultivitanimicos.html"><p>Multivitamínicos</p></a></div>
+                              <div class="boton-submenu"><a href="walmartRespiratorios.html"><p>Respiratorios</p></a></div>
+                              <div class="boton-submenu"><a href="walmartAntimicoticos.html"><p>Antimicoticos</p></a></div>
+                              <div class="boton-submenu"><a href="walmartTalcos.html"><p>Talcos desodorantes</p></a></div>
+                              <div class="boton-submenu"><a href="walmartAnalgesicos.html"><p>Analgésicos Tópicos</p></a></div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="interior">
+                      <section>
+                          <div class="parent">
+                          <div class="panzoom">
+                              <img src="img/jpg/planograma-higiene-walmart.jpg" width="100%" />
+                          </div>
+                          </div>
+                          <div class="reset">
+                                  <img src="img/png/boton_reset.png" alt=""/>
+                          </div>
+                      <script>
+                          (function() {
+                            var $section = $('section');
+                                $section.find('.panzoom').panzoom({
+                                $zoomIn: $section.find(".zoom-in"),
+                                $zoomOut: $section.find(".zoom-out"),
+                                $zoomRange: $section.find(".zoom-range"),
+                                $reset: $section.find(".reset"),
+                            });
+                           })();
+                      </script>
+                      </section>
+                      <aside class="explicacion">
+                          <div class="logo-autoservicio">
+                              <img src="img/gif/logo-walmart.gif" alt=""/>
+                          </div>
+                          <h2>Planograma Certificado</h2>
+                          <br><p>1 Tramo con 16 frentes.</p>
+                          <div class="info"><img src="img/gif/boton_info.gif" /></div>
+                      </aside>
+                  </div>
+                  <div class="pop-up-container">
+                      <div class="pop-up">
+                          <div class="titulo-info">
+                              <h1>Información</h1>
+                              <div class="cerrar"><img src="img/gif/boton_cerrar.gif" /></div>
+                          </div>
+                          <div class="pop-up-text">
+                              <p>Información Confidencial, planograma para uso exclusivo de personal Sanofi, la distribución o copia de este documento y/o de la información contenida está estrictamente prohibida. Su difusión será motivo de estricta sanción.</p>
+                          </div>
+                      </div>
+                  </div>
+</body>
+</html>

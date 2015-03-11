@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+
+<title>Espacio marzo</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<meta name="description" content="Guia Espacio Sanofi" />
+<meta name="author" content="Craft" />
+
+
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+
+<script src="js/jquery-2.1.3.min.js"></script>
+<script src="js/modernizr.custom.25376.js"></script> 
+<script src="js/global.js"></script>
+
+</head>
+
+<body>
+
+      <div id="perspective" class="perspective effect-airbnb">
+          <div class="container">
+              
+              <div class="wrapper">
+                  <div class="header">
+                      <div class="titulosHeader">
+                          <div id="showMenu"><img src="img/png/boton_menuHeader.png" alt=""/></div>
+                          <h3>Marketing</h3>
+                      </div>
+                  </div>
+                  <div class="titulos">
+                      <h1>Marketing</h1>
+                  </div>
+                  <div class="botones">
+                      <div class="botones-secciones">
+                          <a href="marketing-lactacyd-televisa.html"><img src="img/jpg/boton-lactacyd.jpg" alt=""/></a>
+                      </div>
+                      <div class="botones-secciones">
+                          <a href="marketing-melox-televisa.html"><img src="img/jpg/boton-melox.jpg" alt=""/></a>
+                      </div>
+                      <div class="botones-secciones">
+                          <a href="video.html"><img src="img/jpg/boton-videos.jpg" alt=""/></a>
+                      </div>
+                      
+                      
+                  </div>
+              </div>
+              
+  
+          </div><!--container-->
+    
+  <!-- -----------------------Menu Navegacion---------------------------- -->       
+          <nav class="outer-nav left vertical">
+              <div class="titulo">
+                  <a href="#portada"><img src="img/png/logo_sanofi.png" alt=""></a>
+                  <p>Guia<br>marzo</p>    
+              </div>
+              <a href="#" class="lineamientos">Lineamientos de ejecución</a>
+                  <ul class="submenu-navegacion">
+                      <a href="autoserviciosNacionales.html" class="submenus">Autoservicios Nacionales</a>
+                      <a href="cadenasNacionales.html" class="submenus">Cadenas Nacionales</a>  
+                      <a href="autoserviciosRegionales.html" class="submenus">Autoservicios Regionales</a>  
+                      <a href="cadenasRegionales.html" class="submenus">Cadenas Regionales</a>
+                  </ul>  
+              <a href="materialPop.html">Material POP</a>
+              <a href="independientes.html">Independientes</a>
+              <a href="marketing.html">Marketing</a>
+              <a href="../../guia.php">Inicio</a>
+          </nav>
+          
+  
+        
+      </div><!--perspective-->
+
+<script src="js/classie.js"></script>
+<script src="js/menu.js"></script>
+
+
+
+<script>
+$(document).ready(function () {
+	  
+	  $(".lineamientos").click(function(event){
+	  event.preventDefault();
+	  $(".submenu-navegacion").toggleClass("showSubmenu")	
+	  });
+	
+	  $('.pop-up-container').hide();
+	  $('.info').click(function(){
+		$('.pop-up-container').show();
+		$('.pop-up').fadeIn(300);
+	  });
+	  
+	  $('.cerrar').click(function() {
+	  $('.pop-up-container').hide();
+	  });
+	  
+});
+</script>
+    
+</body>
+</html>
