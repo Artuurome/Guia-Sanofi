@@ -17,36 +17,7 @@
 <script src="js/swiper.jquery.js"></script>
 <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
 <script src="js/jquery.panzoom.js"></script>
-<script src="js/modernizr.custom.25376.js"></script>
 <script src="js/global.js"></script>
-
-<script type="text/javascript">
-	$(document).ready(function() {
-		$("#multivitaminicos").click(function(event) {
-			$("#cambio").load('estomacales.html');
-		});
-		
-		$("#walmartHigiene").click(function(event) {
-			$("#cambio").load('walmart-higiene.html');
-		});
-		
-		$(".showDashboard").click(function(event) {
-			$("#envoltorio").load('walmart-dashboard.html');
-		});
-		
-		$('.pop-up-container').hide();
-	  	$('.info').click(function(){
-			$('.pop-up-container').show();
-			$('.pop-up').fadeIn(300);
-	  	});
-	  
-	  	$('.cerrar').click(function() {
-	  		$('.pop-up-container').hide();
-	  	});
-	  
-	});
-</script>
-
 
 <style>
 
@@ -64,16 +35,17 @@
 </head>
 
 <body>
+
                   <div class="submenu">
                       <div class="submenu-wraperAuxiliar">
                           <div class="submenu-wraper">
-                              <div id="walmartHigiene"class="boton-submenu"><a><p>Higiene Femenina</p></a></div>
-                              <div id="estomacales" class="boton-submenu" style="background-color:#324392"><a><p style="color:#ffffff">Estomacales</p></a></div>
-                              <div id="multivitaminicos" class="boton-submenu"><a href="walmartMultivitanimicos.html"><p>Multivitamínicos</p></a></div>
-                              <div class="boton-submenu"><a href="walmartRespiratorios.html"><p>Respiratorios</p></a></div>
-                              <div class="boton-submenu"><a href="walmartAntimicoticos.html"><p>Antimicoticos</p></a></div>
-                              <div class="boton-submenu"><a href="walmartTalcos.html"><p>Talcos desodorantes</p></a></div>
-                              <div class="boton-submenu"><a href="walmartAnalgesicos.html"><p>Analgésicos Tópicos</p></a></div>
+                              <div class="boton-submenu"><a id="higiene"><p>Higiene Femenina</p></a></div>
+                              <div class="boton-submenu" style="background-color:#324392"><a id="estomacales"><p style="color:#ffffff">Estomacales</p></a></div>
+                              <div class="boton-submenu"><a id="multivitaminicos"><p>Multivitamínicos</p></a></div>
+                              <div class="boton-submenu"><a id="respiratorios"><p>Respiratorios</p></a></div>
+                              <div class="boton-submenu"><a id="antimicoticos"><p>Antimicoticos</p></a></div>
+                              <div class="boton-submenu"><a id="talcos"><p>Talcos desodorantes</p></a></div>
+                              <div class="boton-submenu"><a id="analgesicos"><p>Analgésicos Tópicos</p></a></div>
                           </div>
                       </div>
                   </div>
@@ -95,7 +67,7 @@
                                       <h2>ESTOMACALES</strong></h2><br />
                                       <h2>Objetivo</h2><br />
                                       <p><strong>1.</strong> Posicionar nuestras marcas dentro del segmento de la categoría a la que corresponde:</p><br />
-                                      <p><strong>a.</strong> Melox-Acidez (antiácidos)</p><br />
+                                      <p style="margin-left:20px"><strong>a.</strong> Melox-Acidez (antiácidos)</p><br />
                                       <p style="margin-left:20px"><strong>b.</strong> Onoton-Entre Diarrea y Acidez</p><br />
                                       <p style="margin-left:20px"><strong>c.</strong> Sinuberase-Pro bióticos / Diarrea</p><br />
                                       <p style="margin-left:20px"><strong>d.</strong> Naturetti-Laxantes</p><br />
@@ -191,8 +163,8 @@
                           </div>
                       </div>
               </div>
-<script>
 
+<script>
 $(document).ready(function () {
 	
 		var swiper = new Swiper('.swiper-container', {
@@ -214,6 +186,45 @@ $(document).ready(function () {
 			$zoomRange: $section.find(".zoom-range"),
 			$reset: $section.find(".reset"),
 		});
+
+		$("#higiene").click(function(event) {
+		  $("#cambio").load('areaNatural-higiene.html');
+		});
+		
+		$("#estomacales").click(function(event) {
+			$("#cambio").load('areaNatural-estomacales.html');
+		});
+		
+		$("#multivitaminicos").click(function(event) {
+			$("#cambio").load('areaNatural-multivitaminicos.html');
+		});
+		
+		$("#respiratorios").click(function(event) {
+			$("#cambio").load('areaNatural-respiratorios.html');
+		});
+		
+		$("#antimicoticos").click(function(event) {
+			$("#cambio").load('areaNatural-antimicoticos.html');
+		});
+		
+		$("#talcos").click(function(event) {
+			$("#cambio").load('areaNatural-talcos.html');
+		});
+		
+		$("#analgesicos").click(function(event) {
+			$("#cambio").load('areaNatural-analgesicos.html');
+		});
+	
+	  	$('.pop-up-container').hide();
+	  	$('.info').click(function(){
+			$('.pop-up-container').show();
+			$('.pop-up').fadeIn(300);
+	  	});
+	  
+	  	$('.cerrar').click(function() {
+	  		$('.pop-up-container').hide();
+	  	});
+	  
 });
 
 </script>

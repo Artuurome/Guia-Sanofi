@@ -15,35 +15,22 @@
 
 <script src="js/jquery-2.1.3.min.js"></script>
 <script src="js/jquery.panzoom.js"></script>
-<script src="js/modernizr.custom.25376.js"></script> 
 <script src="js/global.js"></script>
 
 </head>
 
 <body>
 
-
-      <div id="perspective" class="perspective effect-airbnb">
-          <div class="container">
-              
-              <div id="antimicoticos-walmart" class="wrapper">
-                  <div class="header">
-                      <div class="titulosHeader">
-                          <div id="showMenu"><img src="img/png/boton_menuHeader.png" alt=""/></div>
-                          <h3>Autoservicios Regionales alsuper</h3>
-                          <div class="showDashboard"><a href="alsuperDashboard.html"><img src="img/jpg/boton_dashboard.jpg" alt="" /></a></div>
-                      </div>
-                  </div>
                   <div class="submenu">
                       <div class="submenu-wraperAuxiliar">
                           <div class="submenu-wraper">
-                              <div class="boton-submenu"><a href="alsuperHigiene.html"><p>Higiene Femenina</p></a></div>
-                              <div class="boton-submenu"><a href="alsuperEstomacales.html"><p>Estomacales</p></a></div>
-                              <div class="boton-submenu"><a href="alsuperMultivitanimicos.html"><p>Multivitamínicos</p></a></div>
-                              <div class="boton-submenu"><a href="alsuperRespiratorios.html"><p>Respiratorios</p></a></div>
-                              <div class="boton-submenu" style="background-color:#324392"><a href="alsuperAntimicoticos.html"><p  style="color:#ffffff">Antimicoticos</p></a></div>
-                              <div class="boton-submenu"><a href="alsuperTalcos.html"><p>Talcos desodorantes</p></a></div>
-                              <div class="boton-submenu"><a href="alsuperAnalgesicos.html"><p>Analgésicos Tópicos</p></a></div>
+                              <div class="boton-submenu"><a id="higiene"><p>Higiene Femenina</p></a></div>
+                              <div class="boton-submenu"><a id="estomacales"><p>Estomacales</p></a></div>
+                              <div class="boton-submenu"><a id="multivitaminicos"><p>Multivitamínicos</p></a></div>
+                              <div class="boton-submenu"><a id="respiratorios"><p>Respiratorios</p></a></div>
+                              <div class="boton-submenu" style="background-color:#324392"><a id="antimicoticos"><p  style="color:#ffffff">Antimicoticos</p></a></div>
+                              <div class="boton-submenu"><a id="talcos"><p>Talcos desodorantes</p></a></div>
+                              <div class="boton-submenu"><a id="analgesicos"><p>Analgésicos Tópicos</p></a></div>
                           </div>
                       </div>
                   </div>
@@ -53,9 +40,9 @@
                           <div class="panzoom">
                               <img src="img/jpg/planograma-antimicoticos.jpg" width="100%" />
                           </div>
+                          </div>
                           <div class="reset">
                                   <img src="img/png/boton_reset.png" alt=""/>
-                          </div>
                           </div>
                       <script>
                           (function() {
@@ -87,9 +74,7 @@
                           <p style="margin-left:20px"><strong>I.</strong> Acomodo: Crema – Aerosol – Polvo</p><br />
                           <div class="info"><img src="img/gif/boton_info.gif" /></div>
                       </aside>
-                      
                   </div>
-              </div>
               <div class="pop-up-container">
                       <div class="pop-up">
                           <div class="titulo-info">
@@ -101,46 +86,36 @@
                           </div>
                       </div>
                   </div>           
-              
-  
-    
-          </div><!--container-->
-    
-  <!-- -----------------------Menu Navegacion---------------------------- -->       
-          <nav class="outer-nav left vertical">
-              <div class="titulo">
-                  <a href="portada.html"><img src="img/png/logo_sanofi.png" alt=""></a>
-                  <p>Guia<br>marzo</p>    
-              </div>
-              <a href="#" class="lineamientos">Lineamientos de ejecución</a>
-                  <ul class="submenu-navegacion">
-                      <a href="autoserviciosNacionales.html" class="submenus">Autoservicios Nacionales</a>
-                      <a href="cadenasNacionales.html" class="submenus">Cadenas Nacionales</a>  
-                      <a href="autoserviciosRegionales.html" class="submenus">Autoservicios Regionales</a>  
-                      <a href="cadenasRegionales.html" class="submenus">Cadenas Regionales</a>
-                  </ul>  
-              <a href="materialPop.html">Material POP</a>
-              <a href="independientes.html">Independientes</a>
-              <a href="marketing.html">Marketing</a>
-              <a href="../../guia.php">Inicio</a>
-          </nav>
-          
-  
-        
-      </div><!--perspective-->
-
-<script src="js/classie.js"></script>
-<script src="js/menu.js"></script>
-
-
 
 <script>
 $(document).ready(function () {
 	
+	  $("#higiene").click(function(event) {
+		$("#cambio").load('areaNatural-higiene.html');
+	  });
 	  
-	  $(".lineamientos").click(function(event){
-	  event.preventDefault();
-	  $(".submenu-navegacion").toggleClass("showSubmenu")	
+	  $("#estomacales").click(function(event) {
+		  $("#cambio").load('areaNatural-estomacales.html');
+	  });
+	  
+	  $("#multivitaminicos").click(function(event) {
+		  $("#cambio").load('areaNatural-multivitaminicos.html');
+	  });
+	  
+	  $("#respiratorios").click(function(event) {
+		  $("#cambio").load('areaNatural-respiratorios.html');
+	  });
+	  
+	  $("#antimicoticos").click(function(event) {
+		  $("#cambio").load('areaNatural-antimicoticos.html');
+	  });
+	  
+	  $("#talcos").click(function(event) {
+		  $("#cambio").load('areaNatural-talcos.html');
+	  });
+	  
+	  $("#analgesicos").click(function(event) {
+		  $("#cambio").load('areaNatural-analgesicos.html');
 	  });
 	
 	  $('.pop-up-container').hide();
