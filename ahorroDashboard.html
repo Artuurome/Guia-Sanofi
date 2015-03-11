@@ -29,12 +29,13 @@
                       <div class="titulosHeader">
                           <div id="showMenu"><img src="img/png/boton_menuHeader.png" alt=""/></div>
                           <h3>Cadenas Nacionales Farmacias del Ahorro</h3>
-                          <div class="showDashboard"><a href="cadenasNacionales.html"><img src="img/jpg/boton_dashboard.jpg" alt="" /></a></div>
+                          <div class="showDashboard"><a id="ahorro" href="cadenasNacionales.html"><img src="img/jpg/boton_dashboard.jpg" alt="" /></a></div>
                       </div>
                   </div>
+                  <div id="cambio">
                   <div class="dashboard">
                       <div class="botones-dashboard">
-                          <a href="ahorroHigiene.html"><img src="img/jpg/boton-areanatural.jpg" alt="" /></a>
+                          <a id="areaNatural"><img src="img/jpg/boton-areanatural.jpg" alt="" /></a>
                       </div>
                       <div class="botones-dashboard">
                           <a href="ahorroExhibidor.html"><img src="img/jpg/boton-ahorro-exhibidor.jpg" alt="" /></a>
@@ -48,6 +49,7 @@
                       <div class="botones-dashboard">
                           <a href="ahorroPromociones.html"><img src="img/jpg/boton-promocion.jpg" alt="" /></a>
                       </div>
+                  </div>
                   </div>
               </div>
               
@@ -88,22 +90,16 @@
 <script>
 $(document).ready(function () {
 	
+	  $("#areaNatural").click(function(event) {
+		  $("#cambio").load('areaNatural-higiene.html');
+		  $("#ahorro").attr('href','ahorroDashboard.html');
+	  });
 	  
 	  $(".lineamientos").click(function(event){
-	  event.preventDefault();
-	  $(".submenu-navegacion").toggleClass("showSubmenu")	
+		  event.preventDefault();
+		  $(".submenu-navegacion").toggleClass("showSubmenu")	
 	  });
-	
-	  $('.pop-up-container').hide();
-	  $('.info').click(function(){
-		$('.pop-up-container').show();
-		$('.pop-up').fadeIn(300);
-	  });
-	  
-	  $('.cerrar').click(function() {
-	  $('.pop-up-container').hide();
-	  });
-	  
+
 });
 </script>
     
